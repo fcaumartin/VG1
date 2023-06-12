@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div>
+        {{ souscategorie.nom }}
+    </div>
+    <hr>
+    {% for produit in souscategorie.produits %}
+        <div>
+            {{ produit.nom }}
+            {{ produit.prix }}
+            <a href="/add/{{ produit.id }}" class="btn btn-success">Ajouter</a>
+
+        </div>
+    {% endfor %}
+{% endblock %}
